@@ -10,6 +10,10 @@ public class AreaRectangle {
         double perimeter;
         Scanner in;
 
+        /**
+         * TODO Need to add in validation against negative numbers
+         */
+
         in = new Scanner(System.in);
         System.out.println("Enter the height: ");
         height = in.nextDouble();
