@@ -1,4 +1,4 @@
-package exercises;
+package org.launchcode.java.exercises;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class AreaRectangle {
         double perimeter;
         Scanner in;
 
-        /**
+        /*
          * TODO Need to add in validation against negative numbers
          */
 

@@ -1,4 +1,4 @@
-package exercises;
+package org.launchcode.java.exercises;
 
 public class FiveLetters {
     public static void main(String[] args) {

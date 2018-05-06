@@ -1,4 +1,4 @@
-package exercises;
+package org.launchcode.java.exercises;
 
 public class AddEven {
     public static void main(String[] args) {
