@@ -14,13 +14,14 @@ public class CountingCharacters {
         char[] charactersInString = words.toLowerCase().toCharArray();
 
         for (char i : charactersInString) {
-            if (counted.containsKey(i)) {
-                counted.put(i, counted.get(i) + 1);
-            } else {
-                counted.put(i, 1);
+            if (Character.isLetter(i)) {
+                if (counted.containsKey(i)) {
+                    counted.put(i, counted.get(i) + 1);
+                } else {
+                    counted.put(i, 1);
+                }
             }
         }
-
         for (char c : counted.keySet()) {
             System.out.println(c + ":" + counted.get(c));
         }
