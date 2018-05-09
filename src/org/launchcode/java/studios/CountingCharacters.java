@@ -11,7 +11,7 @@ public class CountingCharacters {
                 "sollicitudin. Ut at sagittis augue. Praesent quis rhoncus justo. Aliquam erat volutpat. Donec sit " +
                 "amet suscipit metus, non lobortis massa. Vestibulum augue ex, dapibus ac suscipit vel, volutpat eget " +
                 "massa. Donec nec velit non ligula efficitur luctus.";
-        char[] charactersInString = words.toCharArray();
+        char[] charactersInString = words.toLowerCase().toCharArray();
 
         for (char i : charactersInString) {
             if (counted.containsKey(i)) {
