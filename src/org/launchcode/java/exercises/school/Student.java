@@ -1,16 +1,16 @@
 package org.launchcode.java.exercises.school;
 
 public class Student {
-    private String name;
+    private String studentName;
     private int studentId;
     private int numberOfCredits;
     private double gpa;
 
-    public String getName() {
-        return name;
+    public String getStudentName() {
+        return studentName;
     }
-    public void setName(String aName) {
-        name = aName;
+    public void setStudentName(String aStudentName) {
+        studentName = aStudentName;
     }
 
     public int getStudentId() {
