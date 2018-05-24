@@ -61,14 +61,17 @@ public class Student {
 
     public String getGradeLevel() {
         String studentGradeLevel;
-        if (numberOfCredits < 30) {
-            studentGradeLevel = "freshman";
-        } else if (30 <= numberOfCredits && numberOfCredits < 60) {
-            studentGradeLevel = "sophomore";
-        } else if (60 <= numberOfCredits && numberOfCredits < 90) {
-            studentGradeLevel = "junior";
-        } else {
+        if (numberOfCredits >= 90) {
             studentGradeLevel = "senior";
+        }
+        else if (numberOfCredits >= 60) {
+            studentGradeLevel = "junior";
+        }
+        else if (numberOfCredits >= 30) {
+            studentGradeLevel = "sophomore";
+        }
+        else {
+            studentGradeLevel = "freshman";
         }
         return "This student's grade level is " + studentGradeLevel + ".";
     }
