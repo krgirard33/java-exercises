@@ -7,26 +7,46 @@ public class MenuItem {
     private int itemId;
     private String itemName;
     private String itemDescription;
+    private String itemCategory;
+    private double itemPrice;
     private Date itemCreated;
-    public static int nextId = 1;
-    public Date currentDate;
+    private static int nextId = 1;
+    private Date modifiedDate;
 
 
-    public MenuItem (String itemName, String itemDescription, ) {
+    public MenuItem (int itemId, String itemName, String itemDescription, String itemCategory, double itemPrice, Date modifiedDate) {
         this();
+        this.itemId = itemId;
         this.itemName = itemName;
         this.itemDescription = itemDescription;
+        this.itemCategory = itemCategory;
+        this.itemPrice = itemPrice;
+        this.modifiedDate = modifiedDate;
     }
 
     public MenuItem() {
+        itemId = itemId;
+        itemName = "Fatman Burger";
+        itemDescription = "1/2lb burger with onions & green peppers mixed into the burger";
+        itemCategory = "Main Course";
+        itemPrice = 8.99;
+        //modifiedDate = 2018-05-23;
+    }
+
+    public void setMenuItem() {
         itemId = nextId;
         nextId++;
+        itemName = itemName;
+        itemDescription = itemDescription;
+        itemCategory = itemCategory;
+        itemPrice = itemPrice;
+        modifiedDate = new Date();
     }
 
     public int getItemId() {
         return itemId;
     }
-    public int setItemId(int itemId) {
+    public void setItemId(int itemId) {
         this.itemId = itemId;
     }
     public String getItemName() {
@@ -52,11 +72,38 @@ public class MenuItem {
     public void setItemCreated(Date itemCreated) {
         this.itemCreated = itemCreated;
     }
+    public String getItemCategory() {
+        return itemCategory;
+    }
 
-    public String getCurrentDate() {
-        Date currentDate = new Date();
+    public void setItemCategory(String itemCategory) {
+        this.itemCategory = itemCategory;
+    }
+
+    public double getItemPrice() {
+        return itemPrice;
+    }
+
+    public void setItemPrice(double itemPrice) {
+        this.itemPrice = itemPrice;
+    }
+
+    public static int getNextId() {
+        return nextId;
+    }
+
+    public static void setNextId(int nextId) {
+        MenuItem.nextId = nextId;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = new Date();
+    }
+
+    public String getModifiedDate() {
+        Date modifiedDate = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-        return sdf.format(currentDate);
+        return sdf.format(modifiedDate);
     }
 }
 
