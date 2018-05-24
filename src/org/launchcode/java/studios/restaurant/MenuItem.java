@@ -12,7 +12,7 @@ public class MenuItem {
     public Date currentDate;
 
 
-    public MenuItem (String itemName, String itemDescription, ) {
+    public MenuItem (String itemName, String itemDescription) {
         this();
         this.itemName = itemName;
         this.itemDescription = itemDescription;
