@@ -9,7 +9,7 @@ public class Cat {
     // along with all subclasses may access them
     protected boolean tired = true;
     protected boolean hungry = true;
-
+    
     // A cat is rested and hungry after it sleeps
     public void sleep() {
         this.tired = false;
