@@ -34,7 +34,8 @@ public class Menu {
                 "lastModified=" + lastModified +
                 ", category='" + category + '\'' +
                 '}';
-        for (MenuItem mi : items) {
+
+        for(MenuItem mi : items) {
             result += mi.toString();
         }
         return result;
