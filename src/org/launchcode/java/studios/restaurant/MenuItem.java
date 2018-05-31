@@ -1,63 +1,43 @@
 package org.launchcode.java.studios.restaurant;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class MenuItem {
-    private int itemId;
-    private String itemName;
-    private String itemDescription;
-    private Date itemCreated;
-    public static int nextId = 1;
-    public Date currentDate;
 
+    private double price;
+    private String description;
+    private String category;
+    private boolean isNew;
 
-    public MenuItem (String itemName, String itemDescription) {
-        this();
-        this.itemName = itemName;
-        this.itemDescription = itemDescription;
+    public MenuItem(double price, String desc, String category, boolean isNew) {
+        this.price = price;
+        this.description = desc;
+        this.category = category;
+        this.isNew = isNew;
     }
 
-    public MenuItem() {
-        itemId = nextId;
-        nextId++;
+    public double getPrice() {
+        return this.price;
     }
 
-    public int getItemId() {
-        return itemId;
-    }
-    public int setItemId(int itemId) {
-        this.itemId = itemId;
-    }
-    public String getItemName() {
-        return itemName;
+    public String getDescription() {
+        return this.description;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public String getCategory() {
+        return this.category;
     }
 
-    public String getItemDescription() {
-        return itemDescription;
+    public boolean isNew() {
+        return this.isNew;
     }
 
-    public void setItemDescription(String itemDescription) {
-        this.itemDescription = itemDescription;
-    }
-
-    public Date getItemCreated() {
-        return itemCreated;
-    }
-
-    public void setItemCreated(Date itemCreated) {
-        this.itemCreated = itemCreated;
-    }
-
-    public String getCurrentDate() {
-        Date currentDate = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-        return sdf.format(currentDate);
+    @Override
+    public String toString() {
+        return "MenuItem{" +
+                ", description='" + description + '\'' +
+                "price=" + price +
+                ", category='" + category + '\'' +
+                ", isNew=" + isNew +
+                '}';
     }
 }
-
 
